@@ -1,19 +1,19 @@
 <template>
 	<footer class="nav-tab">
 		<router-link to="/index">
-			<span class="iconfont icon-changyonglogo40"></span>
+			<span class="iconfont icon-shouye"></span>
 			<span>首页</span>
 		</router-link>
 		<router-link to="/classify">
-			<span class="iconfont icon-comiisfaxian"></span>
+			<span class="iconfont icon-fenlei"></span>
 			<span>分类</span>
 		</router-link>
 		<router-link to="/cat">
-			<span class="iconfont icon-icon"></span>
+			<span class="iconfont icon-gouwuche"></span>
 			<span>购物车</span>
 		</router-link>
 		<router-link to="/mine">
-			<span class="iconfont icon-wode"></span>
+			<span class="iconfont icon-wo"></span>
 			<span>我的</span>
 		</router-link>
 	</footer>

@@ -1,64 +1,32 @@
 <template>
-  <div class="index-mine">
-  	<header class="mine-header">
-    	<a @click="showRegister" class="mine-header-qianjin" id="mine-header-qianjin">
+    <header class="mine-header">
+    	<router-link to="/cat" class="mine-header-qianjin" id="mine-header-qianjin">
     		<img src="http://s17.mogucdn.com/p1/160922/idid_ie3wmnbvgftginzsmizdambqgayde_35x52.png"/>
-    	</a>			
+    	</router-link>			
     	
     	<div class="title">
     		<a href="javascript:;">登录 - 美丽GO</a>
     	</div>
     	<a class="mine-header-register" href="/user/register">注册</a>		
     </header>
-    <mine-section></mine-section>
-  </div>
 </template>
 
 <script>
-	//https://mainsite-restapi.ele.me/bgs/poi/search_poi_nearby?keyword=%E4%B8%8A%E6%B5%B7&offset=0&limit=20&longitude=116.407173&latitude=39.90469
-import axios from "axios"
-
-import MineSection from "./../MineComponents/MineSectionComponent"
 
 export default {
-  name: 'index-position',
+  name: 'mine-header',
   data () {
     return {
       
     }
   },
   methods:{
-  	showRegister(){
-  		this.$store.commit("AmendIsShow")
-  	}
-  },
-  mounted(){
-
-  },
-  updated(){
-
-  },
-  watch:{
   	
-  },
-  components:{
-  	MineSection
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-@import '../../styles/_base.scss';
-
-.index-mine{
-	width:100%;
-	height:100%;
-	background:#fff;
-	position: absolute;
-	left: 0;
-	top:0;
-	z-index: 200;
 	.mine-header{
 		height: .92rem;
 	    width: 100%;
@@ -94,6 +62,4 @@ export default {
 		    height: .88rem;
 	    }
 	}
-}
-
 </style>

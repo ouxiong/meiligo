@@ -1,9 +1,10 @@
 <template>
   <div class="outmai root-box">
-    <index-header :position="position" :showPosition="showPosition"></index-header>
+    <index-header></index-header>
     <index-banner></index-banner>
-    <transition enter-active-class="animated slideInRight" leave-active-class="animated slideOutRight">
-    	<index-position v-if="isShow" :position="position" :showPosition="showPosition"></index-position>
+    <index-wrap></index-wrap>
+    <transition enter-active-class="animated fadeInDownBig" leave-active-class="animated fadeOutRight">
+    	<index-position v-if="isShow"></index-position>
     </transition>
     
     <nav-tab></nav-tab>
@@ -17,34 +18,30 @@
 	import NavTab from "../NavTab"
 	import IndexHeader from "./IndexHeaderComponent"
 	import IndexBanner from "./IndexBannerComponent"
+	import IndexWrap from "./IndexWrapComponent"
 	import IndexPosition from "./IndexPositionComponent"
 	
 export default {
   name: 'outmai',
   data () {
     return {
-      isShow:false
+      
     }
   },
   computed:{
-  	...mapState(["position"])
+  	...mapState(["isShow"])
   },
   methods:{
-  	showPosition(){
-  		this.isShow = !this.isShow
-  	},
-  	...mapActions(["getPosition"])
+  	
   },
   mounted(){
-  	if(!this.position.latitude){
-  		this.getPosition()
-  		
-  	}
+  	
   },
   components:{
   	IndexHeader,
   	IndexPosition,
-  	IndexBanner
+  	IndexBanner,
+  	IndexWrap
   }
 }
 </script>

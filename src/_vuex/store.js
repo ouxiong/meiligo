@@ -11,16 +11,12 @@ Vue.use(Vuex)
 
 
 const state = {
-	position:{
-		latitude:null,
-		longitude:null,
-		address:""
-	}
+	isShow:false
 }
 
 const mutations = {
-	getPosition(state,position){
-		state.position = position
+	AmendIsShow(){
+		state.isShow = !state.isShow
 	}
 }
 
