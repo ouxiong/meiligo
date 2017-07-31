@@ -1,4 +1,4 @@
-@mixin one-pixel($bg-color:#c9c9c9){
+@mixin one-pixel($bg-color:#ddd){
     position: relative;
     &:after{
         content: '';

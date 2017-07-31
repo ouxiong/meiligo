@@ -4,6 +4,7 @@ import IndexComponent from '@/components/IndexComponents/IndexComponent'
 import ClassifyComponent from '@/components/ClassifyComponents/ClassifyComponent'
 import CartComponent from '@/components/ShoppingCartCompoments/CartComponent'
 import MineComponent from '@/components/MineComponents/MineComponent'
+import city from '../components/IndexComponents/city/IndexCity'
 
 Vue.use(Router)
 
@@ -15,6 +16,7 @@ export default new Router({
     {path: '/classify',name: 'classify',component: ClassifyComponent},
     {path: '/cat',name: 'cat',component: CartComponent},
     {path: '/mine',name: 'mine',component: MineComponent},
+    {path: '/city',name: 'city',component: city},
     
   ]
 })

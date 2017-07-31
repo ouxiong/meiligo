@@ -15,12 +15,8 @@
 	import  {mapState,mapGetters,mapActions} from "vuex"
 	
 	import NavTab from "../NavTab"
-	
 	import IndexHeader from "./IndexHeaderComponent"
-	
 	import IndexBanner from "./IndexBannerComponent"
-	
-	
 	import IndexPosition from "./IndexPositionComponent"
 	
 export default {
