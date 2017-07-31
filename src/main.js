@@ -8,6 +8,15 @@ import store from "./_vuex/store"
 
 Vue.config.productionTip = false
 
+
+//引入组件mint-ui
+import MintUI from 'mint-ui';
+import 'mint-ui/lib/style.css';
+
+Vue.use(MintUI);
+
+
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

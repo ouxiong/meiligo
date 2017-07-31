@@ -4,28 +4,31 @@
 			<form id="index-header-form" class="" method="post">
 				<a href="/" class="home_btn"></a>
 				<input class="index-header-search" type="search" placeholder="套装" data-value="套装">
-				<div id="index-header-mine" class="index-header-mine"></div>
+				<div id="index-header-mine" class="index-header-mine"  @click="showRegister"></div>
 			</form>
 		</header>
   </div>
 </template>
 
 <script>
-	
-	import axios from "axios"
+import  {mapState,mapGetters,mapActions} from "vuex"
+
+
+import axios from "axios"
 export default {
   name: 'index-header',
-  props:["position","showPosition"],
   data () {
     return {
      
     }
   },
   methods:{
-  	
+  	showRegister(){
+  		this.$store.commit("AmendIsShow")
+  	}
   },
   mounted(){
-
+  	
   },
   updated(){
   },
