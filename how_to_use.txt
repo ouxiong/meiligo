@@ -4,3 +4,15 @@ git add README.md
 git commit -m "first commit"
 git remote add origin git@github.com:xiaozukeji/meiligo.git
 git push -u origin master
+
+
+
+git checkout XXX
+git branch
+git merge origin/master
+git pull
+±à¼­
+git add .
+git commit -m ""
+git branch (check your branch
+git push
