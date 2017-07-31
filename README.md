@@ -1,4 +1,4 @@
-# meili
+# my-kaili
 
 > A Vue.js project
 
