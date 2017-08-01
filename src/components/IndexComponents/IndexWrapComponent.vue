@@ -1,17 +1,17 @@
 <template>
   <div class="index-wrap">
-    <div class="index-wrap-box">
-    	  <ul class="index-wrap-box-uls">
-    	  	<li class="index-wrap-box-lis" v-for="_wrap in wrap">
-    	  		<a href="" class="link">
-    	  			<div>
-    	  				<img class="J_dynamic_img" alt="" :src="_wrap.image">
-    	  			</div>
-    	  			<p class="img-title" v-text="_wrap.title"></p>
-    	  		</a>
-	  			</li>
-	  		</ul>
-    </div>
+  	<div class="swiper-container index-wrap-box">
+			<div class="swiper-wrapper index-wrap-box-uls">
+				<div class="swiper-slide index-wrap-box-lis" v-for="_wrap in wrap">
+					<a href="" class="link">
+		  			<div>
+		  				<img class="J_dynamic_img" alt="" :src="_wrap.image">
+		  			</div>
+		  			<p class="img-title" v-text="_wrap.title"></p>
+		  		</a>
+				</div>
+			</div>
+		</div>
   </div>
 </template>
 
@@ -33,7 +33,6 @@ export default {
 			let that = this;
 			jsonp("http://mce.mogucdn.com/jsonp/multiget/3?pids=5868%2C6348%2C43542%2C13730%2C59540%2C42287", null, function (err, res) {
 				  if (res) {
-				  console.log(res.data["13730"].list)
 				  that.wrap=res.data["13730"].list
 				  }
 				});
@@ -43,7 +42,11 @@ export default {
 		this.getWrap()
   },
   updated(){
-  	
+  	this.$options.swiper = new Swiper(".index-wrap-box",{
+        freeMode:true,
+	  		slidesPerView:"auto",
+	  		freeModeSticky:true
+  	})
   },
   watch:{
   	
@@ -57,14 +60,13 @@ export default {
 	    padding-bottom: 0.2rem;
     	background: #eeeeee;
     	.index-wrap-box{
-    		overflow: hidden;
+    		/*overflow: scroll;*/
     		padding: .2rem;
 		    padding-left: 0.1rem;
 		    padding-right: 0.1rem;
 		    background-color: #fff;
 		    .index-wrap-box-uls{
-		    	overflow: hidden;
-		    	overflow-x: scroll;
+		    	/*overflow: hidden;*/
 			    white-space: nowrap;
 			    .index-wrap-box-lis{
 			    	width:1.6rem;

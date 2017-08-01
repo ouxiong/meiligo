@@ -15,11 +15,7 @@ export default new Router({
     {path: '/index',name: 'index',component: IndexComponent},
     {path: '/classify',name: 'classify',component: ClassifyComponent},
     {path: '/cat',name: 'cat',component: CartComponent},
-
     {path: '/mine',name: 'mine',component: MineComponent},
-    {path: '/city',name: 'city',component: city},
-    
-
-   
+    {path: '/city',name: 'city',component: city}
   ]
 })
