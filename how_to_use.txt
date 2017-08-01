@@ -11,8 +11,15 @@ git checkout XXX
 git branch
 git merge origin/master
 git pull
-�༭
+±à¼­
 git add .
 git commit -m ""
 git branch (check your branch
 git push
+
+1.明天一早，在你桌面那个文件夹里面 git bach
+2.然后切换分支到0801aiguo【切换不过去先 git checkout master然后git checkout 0801aiguo】确认括号里的分支是你的分支
+3. 在你的分支里面 git merge origin/master
+4.git pull
+5.跑一下代码，检查有没有问题，没有问题就复制到你开发的文件夹
+6.飞速撸起来
