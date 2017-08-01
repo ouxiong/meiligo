@@ -1,8 +1,12 @@
 <template>
   <ul class="itemWarp">
         <li class="item " v-for="(item,i) in items">
-            <!-- <router-link class="AItem" to="/classifylist/">  -->
-            <router-link class="AItem" :to="{path:'/classifylist',query:{id:pid[i]}}"> 
+               <!-- <router-link class="AItem" :to="'/classifylist/'+pid[i]">     -->
+               <router-link class="AItem" :to="(i<12)?'/classifylist/'+pid[i]:'/goodslist'">    
+              
+              <!--/classifylist/:pid  -->
+             <!-- <router-link class="AItem" :to="{path:'/classifylist',query:{id:pid[i]}}">   -->
+             <!-- 路由里面的配置/classifylist -->
                 <div>
                     <img  :src="item.image" alt="">
                 </div>  
@@ -40,13 +44,6 @@ export default {
             });
            
       },
-    //   getData(){
-    //       jsonp('https://simba-api.meilishuo.com/venus/mce/v1/urlMakeUpChange/h5?channel=wap&page=1&pageSize=30&pid='+ this.pid,{callback:'jsonp1',},function(err, data){
-    //           if(data){
-    //               console.log(data)
-    //           }
-    //       })
-    //   }
   },
   mounted(){
       this.getItem()
@@ -96,19 +93,7 @@ export default {
             }
         }
     }
-    // .borderBotton{
-    //     position: relative;
-    //     &:after{
-    //         content: '';
-    //         display: block;
-    //         width: 100%;
-    //         height:1px;
-    //         background:#eee;
-    //         position: absolute;
-    //         left: 0;
-    //         bottom: 0;
-    //     }
-    // }
+  
     
 	
 </style>

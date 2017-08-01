@@ -6,6 +6,7 @@ import CartComponent from '@/components/ShoppingCartCompoments/CartComponent'
 import MineComponent from '@/components/MineComponents/MineComponent'
 import city from '../components/IndexComponents/city/IndexCity'
 import ClassifyList from '../components/ClassifyComponents/ClassifyList.vue'
+import GoodsList from '../components/ClassifyComponents/GoodsList'
 
 Vue.use(Router)
 
@@ -18,7 +19,11 @@ export default new Router({
     {path: '/cat',name: 'cat',component: CartComponent},
     {path: '/mine',name: 'mine',component: MineComponent},
     {path: '/city',name: 'city',component: city},
-    {path: '/classifylist',name: 'ClassifyList',component: ClassifyList},
+    {path: '/classifylist/:pid',name: 'ClassifyList',component: ClassifyList},
+    {path: '/goodslist',name: 'GoodsList',component: GoodsList},
+    
+    
+    
     
     
 
