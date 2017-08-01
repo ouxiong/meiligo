@@ -1,5 +1,6 @@
 <template>
 	<footer class="nav-tab">
+		
 		<router-link to="/index">
 			<span class="iconfont icon-shouye"></span>
 			<span>首页</span>
@@ -34,9 +35,10 @@
 <style scoped lang="scss">
 	
 	.nav-tab{
-		position: absolute;
+		position: fixed;
 		bottom:0;
 		left:0;
+		z-index: 9999;
 		width:100%;
 		padding: .05rem 0;
 	    background-color: #fff;

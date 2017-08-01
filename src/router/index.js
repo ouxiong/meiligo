@@ -21,12 +21,7 @@ export default new Router({
     {path: '/city',name: 'city',component: city},
     {path: '/classifylist/:pid',name: 'ClassifyList',component: ClassifyList},
     {path: '/goodslist',name: 'GoodsList',component: GoodsList},
-    
-    
-    
-    
-    
 
-   
+
   ]
 })
