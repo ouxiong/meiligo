@@ -7,7 +7,8 @@ import MineComponent from '@/components/MineComponents/MineComponent'
 import city from '../components/IndexComponents/city/IndexCity'
 import ClassifyList from '../components/ClassifyComponents/ClassifyList.vue'
 import GoodsList from '../components/ClassifyComponents/GoodsList'
-
+import AllGroupBooking from "../components/AllGroupBookingComponents/AllGroupBookingComponent"
+import Strategy from "../components/AllGroupBookingComponents/AllGroupBookingStrategy"
 Vue.use(Router)
 
 export default new Router({
@@ -21,7 +22,8 @@ export default new Router({
     {path: '/city',name: 'city',component: city},
     {path: '/classifylist/:pid',name: 'ClassifyList',component: ClassifyList},
     {path: '/goodslist',name: 'GoodsList',component: GoodsList},
-
+		{path: '/allgroupbooking',name: 'allgroupbooking',component: AllGroupBooking},
+		{path: '/strategy',name: 'Strategy',component: Strategy}
 
   ]
 })

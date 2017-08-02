@@ -11,12 +11,27 @@ Vue.use(Vuex)
 
 
 const state = {
-	isShow:false
+	isShow:false,
+	goTopShow:false,
+	searchItemShow:false,
+	sort:'pop'
 }
 
 const mutations = {
 	AmendIsShow(){
 		state.isShow = !state.isShow
+	},
+	AmendgoTopShow(){
+		state.goTopShow = true;
+	},
+	AmendgoTopHide(){
+		state.goTopShow = false;
+	},
+	ChangeSearchItemShow(){
+		state.searchItemShow = !state.searchItemShow
+	},
+	ChangeSort(state,sort){
+		state.sort = sort;
 	}
 }
 

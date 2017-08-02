@@ -36,7 +36,6 @@ export default {
 //			}.bind(this))
 				jsonp("http://mce.mogucdn.com/jsonp/multiget/3?pids=5868%2C6348%2C43542%2C13730%2C59540%2C42287", null, function (err, res) {
 				  if (res) {
-				  console.log(res.data["43542"].list)
 				  that.banner=res.data["43542"].list
 				  }
 				});
