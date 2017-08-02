@@ -2,13 +2,13 @@
   <div class="index-wrap">
   	<div class="swiper-container index-wrap-box">
 			<div class="swiper-wrapper index-wrap-box-uls">
-				<div class="swiper-slide index-wrap-box-lis" v-for="_wrap in wrap">
-					<a href="" class="link">
+				<div class="swiper-slide index-wrap-box-lis" v-for="(_wrap,$index) in wrap">
+					<router-link :to="toRouter[$index]" class="link">
 		  			<div>
 		  				<img class="J_dynamic_img" alt="" :src="_wrap.image">
 		  			</div>
 		  			<p class="img-title" v-text="_wrap.title"></p>
-		  		</a>
+		  		</router-link>
 				</div>
 			</div>
 		</div>
@@ -25,7 +25,8 @@ export default {
   swiper:null,
   data () {
     return {
-     wrap:[]
+     wrap:[],
+     toRouter:["allgroupbooking","xiazhuang","mingxing","quantao","shangxin"]
     }
   },
   methods:{
