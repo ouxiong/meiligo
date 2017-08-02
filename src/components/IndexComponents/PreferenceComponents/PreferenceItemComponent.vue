@@ -17,8 +17,8 @@
 					<a href="javascript:void(0);" class="goods_chakan"></a>
 				</div>
 			</div>
-		</div>
-		<fill-gray></fill-gray>
+	</div>
+	<fill-gray></fill-gray>
   </div>
 </template>
 

@@ -4,13 +4,13 @@
         <div class="classifyTitle">{{item.info.title}}</div>
         <ul class="itemWarp">
             <li class="item" v-for="elem in item.list">
-                <a class="AItem" href="###">   
+                <router-link class="AItem" to="/goodslist">   
                 
                     <div>
                         <img  :src="elem.image" alt="">
                     </div>  
                     <b class="img-title">{{elem.title}}</b>  
-                </a>
+                </router-link>
             </li>
             
             
@@ -35,7 +35,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .classifyTitle{
     width:100%; 
     overflow: hidden;

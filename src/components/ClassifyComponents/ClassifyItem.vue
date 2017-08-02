@@ -51,7 +51,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
     @import '../../styles/_base.scss';
 	.itemWarp{
         width: 100%;
