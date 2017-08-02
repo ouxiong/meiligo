@@ -2,13 +2,13 @@
   <div class="index-wrap">
   	<div class="swiper-container index-wrap-box">
 			<div class="swiper-wrapper index-wrap-box-uls">
-				<div class="swiper-slide index-wrap-box-lis" v-for="_wrap in wrap">
-					<a href="" class="link">
+				<div class="swiper-slide index-wrap-box-lis" v-for="(_wrap,$index) in wrap">
+					<router-link :to="toRouter[$index]" class="link">
 		  			<div>
 		  				<img class="J_dynamic_img" alt="" :src="_wrap.image">
 		  			</div>
 		  			<p class="img-title" v-text="_wrap.title"></p>
-		  		</a>
+		  		</router-link>
 				</div>
 			</div>
 		</div>
@@ -25,7 +25,8 @@ export default {
   swiper:null,
   data () {
     return {
-     wrap:[]
+     wrap:[],
+     toRouter:["allgroupbooking","xiazhuang","mingxing","quantao","shangxin"]
     }
   },
   methods:{
@@ -34,6 +35,7 @@ export default {
 			jsonp("http://mce.mogucdn.com/jsonp/multiget/3?pids=5868%2C6348%2C43542%2C13730%2C59540%2C42287", null, function (err, res) {
 				  if (res) {
 				  that.wrap=res.data["13730"].list
+				  console.log(res.data["13730"].list)
 				  }
 				});
 		}
@@ -76,6 +78,7 @@ export default {
 				    background-size: 80%;
 				    .link{
 				    	text-align: center;
+				    	-webkit-tap-highlight-color:rgba(0,0,0,0);
 				    	>div{
 				    		height:1.6rem;
 				    		overflow: hidden;

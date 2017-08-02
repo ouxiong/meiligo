@@ -3,7 +3,7 @@
     <header class="index-header-box">
 			<form id="index-header-form" class="" method="post">
 				<a href="/" class="home_btn"></a>
-				<input class="index-header-search" type="search" placeholder="套装" data-value="套装">
+				<input @click="getSearchItemShow" class="index-header-search" type="search" placeholder="套装" data-value="套装">
 				<div id="index-header-mine" class="index-header-mine"  @click="showRegister"></div>
 			</form>
 		</header>
@@ -26,12 +26,19 @@ export default {
   methods:{
   	showRegister(){
   		this.$store.commit("AmendIsShow")
+  	},
+  	getSearchItemShow(){
+  		this.$store.commit("ChangeSearchItemShow")
   	}
   },
   mounted(){
   	
   },
   updated(){
+  	
+  },
+  computed:{
+  	
   },
   watch:{
   	

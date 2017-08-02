@@ -1,44 +1,55 @@
 <template>
 	<footer class="nav-tab">
-		<go-top></go-top>
-		<router-link to="/index">
-			<span class="iconfont icon-shouye"></span>
-			<span>首页</span>
-		</router-link>
-		<router-link to="/classify">
-			<span class="iconfont icon-fenlei"></span>
-			<span>分类</span>
-		</router-link>
-		<router-link to="/cat">
-			<span class="iconfont icon-gouwuche"></span>
-			<span>购物车</span>
+		
+		<router-link to="/allgroupbooking">
+			<span class="iconfont icon-feiyong"></span>
+			<span>超值拼团</span>
 		</router-link>
 		<router-link to="/mine">
-			<span class="iconfont icon-wo"></span>
-			<span>我的</span>
+			<span class="iconfont icon-wode"></span>
+			<span>我的拼团</span>
+		</router-link>
+		<router-link to="/strategy">
+			<span class="iconfont icon-xiangqing1"></span>
+			<span>拼团攻略</span>
 		</router-link>
 	</footer>
 </template>
 
 <script>
-	import Vue from "vue"
+	import axios from "axios"
 	
-	import GoTop from "./GoTopComponent"
+	import jsonp from "jsonp"
 	
-	const NavTab = Vue.extend({
-		name:"navtab",
-		components:{
-			GoTop
-		}
-	})
+	//引入组件
 	
-	Vue.component("nav-tab",NavTab)
 	
-	export default NavTab
+export default {
+  name: 'nav-tab',
+  data () {
+    return {
+     
+    }
+  },
+  methods:{
+		
+  },
+  mounted(){
+		
+  },
+  updated(){
+  	
+  },
+  watch:{
+  	
+  },
+  components:{
+  	
+  }
+}
 </script>
 
 <style scoped lang="scss">
-	
 	.nav-tab{
 		position: fixed;
 		bottom:0;

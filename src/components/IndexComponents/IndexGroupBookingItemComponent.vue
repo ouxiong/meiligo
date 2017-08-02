@@ -1,15 +1,6 @@
 <template>
-  <div class="index-groupBooking">
-  	<fill></fill>
-  	<div class="index-groupBooking-box">
-  		<h2>
-    		<span>超值拼团</span>
-    		<router-link to="/allgroupbooking">全部拼团 
-    			<img src="https://s10.mogucdn.com/mlcdn/c45406/170706_7d6f70iaill2c55je7h09225ida77_21x33.png">
-    		</router-link>
-  		</h2>
-  		<group-booking-item :group="group" v-for="(group,$index) in groupBooking" key="$index"></group-booking-item>
-  		<!--<div class="index-groupBooking-main" v-for="group in groupBooking">
+  <div class="groupBooking-item">
+  		<div class="index-groupBooking-main">
   			<a class="groupBooking-minbox" href="#">
   				<div class="minbox-left">
   					<div class="minbox-left-img">
@@ -30,11 +21,8 @@
   					</div>
   				</div>
   			</a>
-  		</div>-->
+  		</div>
   		
-  	</div>
-  	<router-link to="/allgroupbooking" class="more">全部超值拼团</router-link>
-  	<fill></fill>
   </div>
 </template>
 
@@ -46,33 +34,19 @@
 	
 	//引入组件
 	import Fill from "../FillComponent"
-	
-	import GroupBookingItem from "./IndexGroupBookingItemComponent"
 export default {
   name: 'index-groupBooking',
-  swiper:null,
+  props:["group"],
   data () {
     return {
      groupBooking:[]
     }
   },
   methods:{
-		getgroupBooking(){
-			let that = this;
-			jsonp("http://mce.mogucdn.com/jsonp/multiget/3?pids=5868%2C6348%2C43542%2C13730%2C59540%2C42287", null, function (err, res) {
-				  if (res) {
-//				  that.groupBooking=res.data["59540"].list     拼团的全部数据
-				  	res.data["59540"].list.forEach((item,i)=>{
-				  		if(i<5){
-				  			that.groupBooking.push(item)
-				  		}
-				  	})
-				  }
-				});
-		}
+		
   },
   mounted(){
-		this.getgroupBooking()
+		
   },
   updated(){
   	
@@ -81,34 +55,14 @@ export default {
   	
   },
   components:{
-  	Fill,
-  	GroupBookingItem
+  	Fill
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-	.index-groupBooking{
-		width:100%;
-		.index-groupBooking-box{
-			padding-left: 0.2rem;
-    	background-color: #fff;
-			>h2{
-		    background-color: #fff;
-		    color: #333;
-		    font-size: 0.28rem;
-		    padding: .3rem .2rem 0;
-		    font-weight: normal;
-		    display: flex;
-		    justify-content: space-between;
-		    >a{
-		    	color:#999;
-		    	>img{
-    		    width: 0.1rem;
-		    	}
-		    }
-			}
+	.groupBooking-item{
 			.index-groupBooking-main{
 				.groupBooking-minbox{
 					display: block;
@@ -186,19 +140,4 @@ export default {
 				}
 			}
 		}
-		.more{
-			display: block;
-	    width: 4.6rem;
-	    height: 0.6rem;
-	    line-height: 0.61rem;
-	    background-color: #f69;
-	    color: #fff;
-	    text-align: center;
-	    margin-left: auto;
-	    margin-right: auto;
-	    margin-top: 0.3rem;
-	    font-size: 0.28rem;
-	    border-radius: 0.6rem;
-		}
-	}
 </style>

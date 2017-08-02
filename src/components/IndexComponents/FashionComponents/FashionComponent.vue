@@ -36,7 +36,6 @@ export default {
 			let that = this;
 			jsonp("https://simba-api.meilishuo.com/venus/topic/v2/queryTopicList/h5", null, function (err, res) {
 				  if (res) {
-				  	console.log(res.data)
 				  	that.Fashion=res.data
 				  }
 				});

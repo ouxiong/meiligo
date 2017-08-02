@@ -1,8 +1,8 @@
 <template>
     <header class="mine-header">
-    	<router-link to="/cat" class="mine-header-qianjin" id="mine-header-qianjin">
+    	<a href="javascript:history.go(-1)" class="mine-header-qianjin" id="mine-header-qianjin">
     		<img src="http://s17.mogucdn.com/p1/160922/idid_ie3wmnbvgftginzsmizdambqgayde_35x52.png"/>
-    	</router-link>			
+    	</a>			
     	
     	<div class="title">
     		<a href="javascript:;">登录 - 美丽GO</a>

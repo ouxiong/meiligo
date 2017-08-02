@@ -38,14 +38,13 @@ export default {
     }
   },
   computed:{
-  	
+  	...mapState(["sort"])
   },
   methods:{
   	getPreferenceContent(){
 			let that = this;
-			jsonp("http://list.meilishuo.com/search?frame="+this.index+"&page="+this.index+"&cKey=wap-index&tag=&maxPrice=&minPrice=&fcid=&_mgjuuid=cae3bc16-7395-4df9-b9af-aa6cdf6599ef&sort=pop", null, function (err, res) {
+			jsonp("http://list.meilishuo.com/search?frame="+this.index+"&page="+this.index+"&cKey=wap-index&tag=&maxPrice=&minPrice=&fcid=&_mgjuuid=cae3bc16-7395-4df9-b9af-aa6cdf6599ef&sort="+this.sort, null, function (err, res) {
 				  if (res) {
-				  	console.log(res.data.list)
 				  	res.data.list.forEach((item,i)=>{
 				  		that.preContent.push(item)
 				  	})
@@ -63,12 +62,19 @@ export default {
   },
   components:{
   	
+  },
+  watch:{
+  	sort(){
+  		this.preContent=[];
+  		this.getPreferenceContent()
+  	}
   }
 }
 </script>
 <!--http://list.meilishuo.com/search?frame=2&page=2&cKey=wap-index&tag=&maxPrice=&minPrice=&fcid=&_mgjuuid=cae3bc16-7395-4df9-b9af-aa6cdf6599ef&sort=pop&trace=0&cpc_offset=0&_=1501594307435&callback=jsonp6-->
 <!--http://list.meilishuo.com/search?frame=1&page=1&cKey=wap-index&tag=&maxPrice=&minPrice=&fcid=&_mgjuuid=cae3bc16-7395-4df9-b9af-aa6cdf6599ef&sort=pop&_=1501594300829&callback=jsonp3-->
 <!-- Add "scoped" attribute to limit CSS to this component only -->
+<!--http://list.meilishuo.com/search?frame=1&page=1&cKey=wap-index&tag=&maxPrice=&minPrice=&fcid=&_mgjuuid=cae3bc16-7395-4df9-b9af-aa6cdf6599ef&sort=new&_=1501643053818&callback=jsonp6-->
 <style scoped lang="scss">
 	.index-prevalent-content{
 		display: flex;
