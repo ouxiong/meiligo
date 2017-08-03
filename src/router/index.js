@@ -11,6 +11,9 @@ import GoodsList from '../components/ClassifyComponents/GoodsList'
 import GoodsInfo from '../components/GoodsInfo/GoodsInfo'
 import AllGroupBooking from "../components/AllGroupBookingComponents/AllGroupBookingComponent"
 import Strategy from "../components/AllGroupBookingComponents/AllGroupBookingStrategy"
+import HotSummer from "../components/HotSummerComponents/HotSummerComponent"
+import StartAlmirah from "../components/StartAlmirahComponents/StartAlmirahComponent"
+import FullSet from "../components/FullSetComponents/FullSetComponent"
 Vue.use(Router)
 
 export default new Router({
@@ -26,8 +29,9 @@ export default new Router({
     {path: '/goodslist',name: 'GoodsList',component: GoodsList},
     {path: '/detail',name: 'GoodsInfo',component: GoodsInfo},
 		{path: '/allgroupbooking',name: 'allgroupbooking',component: AllGroupBooking},
-		{path: '/strategy',name: 'Strategy',component: Strategy}
-
-
+		{path: '/strategy',name: 'Strategy',component: Strategy},
+		{path: '/hotsummer',name: 'HotSummer',component: HotSummer},
+		{path: '/startalmirah',name: 'StartAlmirah',component: StartAlmirah},
+		{path: '/fullset',name: 'FullSet',component: FullSet}
   ]
 })

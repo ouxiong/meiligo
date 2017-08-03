@@ -6,7 +6,7 @@
 		<div class="swiper-container fashion-item-box">
 			<div class="swiper-wrapper fashion-item-box-uls">
 				<div class="swiper-slide fashion-item-lis" v-for="list in fashicon.goodsList">
-					<a href="goods_item">
+					<router-link to="/detail">
 						<div class="goods_img">
 							<img :src="list.image" alt="list.title">
 						</div>
@@ -14,7 +14,7 @@
 							<p class="goods_item_title" v-text="list.title"></p>
 							<p class="goods_item_price" v-text="'￥'+list.price">      </p>
 						</div>
-					</a>
+					</router-link>
 				</div>
 			</div>
 		</div>

@@ -54,7 +54,6 @@ export default {
 			jsonp("http://m.meilishuo.com/pintuan/aj/index_wall?offset=0&frame=0&trace=0&limit=20&endId=0&pid="+this.pid+"&page=1", null, function (err, res) {
 				  if (res) {
 				  that.gbcontent=res.data.list
-				  console.log(res.data.list)
 				  }
 				});
 		},
