@@ -1,7 +1,7 @@
 <template>
   <div class="groupBooking-item">
   		<div class="index-groupBooking-main">
-  			<a class="groupBooking-minbox" href="#">
+  			<router-link to="/detail" class="groupBooking-minbox">
   				<div class="minbox-left">
   					<div class="minbox-left-img">
   						<img :src="group.image" :alt="group.itemAdvantageDesc">
@@ -20,7 +20,7 @@
 	  					<div class="go-groupBooking">去开团</div>
   					</div>
   				</div>
-  			</a>
+  			</router-link>
   		</div>
   		
   </div>

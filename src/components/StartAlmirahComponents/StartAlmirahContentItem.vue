@@ -1,6 +1,6 @@
 <template>
-  <div class="index-prevalent-content" v-infinite-scroll="loadMore" infinite-scroll-disabled="loading" infinite-scroll-distance="100">
-    <div class="content-box" v-for="item in preContent">
+  <div class="start-almirah-content" v-infinite-scroll="loadMore" infinite-scroll-disabled="loading" infinite-scroll-distance="300">
+    <div class="content-box" v-for="item in startAlmirahContent">
     	<router-link to="/detail" class="iwf">
     		<div class="content-box-top">
     			<div class="content-box-tags">
@@ -11,7 +11,7 @@
     		<p class="title"  v-text="item.title"> </p>
     		<div class="goods_info">
     			<span class="price_info" v-text="item.price"></span>
-    			<span class="fav_num"><em class="no_collect_icon"></em>{{item.cfav}}</span>
+    			<span class="fav_num"><em class="no_collect_icon"></em></span>
     		</div>
     	</router-link>
     </div>
@@ -30,23 +30,23 @@
 	Vue.use(InfiniteScroll);
 	//引入子组件
 export default {
-  name: 'index-prevalent-content',
+  name: 'start-almirah-content',
   data () {
     return {
-      preContent:[],
+      startAlmirahContent:[],
       index:1
     }
   },
   computed:{
-  	...mapState(["sort"])
+  	
   },
   methods:{
-  	getPreferenceContent(){
+  	getStartAlmirahContent(){
 			let that = this;
-			jsonp("http://list.meilishuo.com/search?frame="+this.index+"&page="+this.index+"&cKey=wap-index&tag=&maxPrice=&minPrice=&fcid=&_mgjuuid=cae3bc16-7395-4df9-b9af-aa6cdf6599ef&sort="+this.sort, null, function (err, res) {
+			jsonp("https://list.meilishuo.com/search?frame=1&page=1&cKey=wap-cate&tag=&fcid=10063407&imgSize=220x330&sort=pop", null, function (err, res) {
 				  if (res) {
 				  	res.data.list.forEach((item,i)=>{
-				  		that.preContent.push(item)
+				  		that.startAlmirahContent.push(item)
 				  	})
 				  }
 				});
@@ -54,20 +54,17 @@ export default {
 		loadMore() {
 		  this.loading = true;
 		  this.index++;
-		  this.getPreferenceContent()
+		  this.getStartAlmirahContent()
 		}
   },
   mounted(){
-//	this.getPreferenceContent()
+		
   },
   components:{
   	
   },
   watch:{
-  	sort(){
-  		this.preContent=[];
-  		this.getPreferenceContent()
-  	}
+  	
   }
 }
 </script>
@@ -76,7 +73,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <!--http://list.meilishuo.com/search?frame=1&page=1&cKey=wap-index&tag=&maxPrice=&minPrice=&fcid=&_mgjuuid=cae3bc16-7395-4df9-b9af-aa6cdf6599ef&sort=new&_=1501643053818&callback=jsonp6-->
 <style scoped lang="scss">
-	.index-prevalent-content{
+	.start-almirah-content{
 		display: flex;
 		flex-wrap: wrap;
 		.content-box{
@@ -128,13 +125,13 @@ export default {
 		    }
 		    .goods_info{
 	    	    text-align: center;
-				    height: .24rem;
+				    height: .4rem;
 				    overflow: hidden;
 				    font-size: 0;
 				    .price_info{
 		    	    color: #FF3366;
 					    text-align: center;
-					    font-size: 0.26rem;
+					    font-size: 0.34rem;
 					    margin-right: 0.2rem;
 					    line-height: 1;
 				    }
@@ -144,7 +141,7 @@ export default {
 					    line-height: 1;
 					    .no_collect_icon{
 					    	display: inline-block;
-						    background: url("../../../image/xingxing.png") no-repeat;
+						    /*background: url("../../../image/xingxing.png") no-repeat;*/
 						    background-size: contain;
 						    width: .23rem;
 						    height: .22rem;

@@ -1,16 +1,22 @@
 <template>
   <div class="finder root-box">
-    <index-header></index-header>
-    <div class="classifyTitle">本周流行</div>
-    <div class="itemBox">
+    <index-header v-if="!searchItemShow"></index-header>
+    <search-item v-if="searchItemShow"></search-item>
+    <div class="classifyTitle" v-if="!searchItemShow">本周流行</div>
+    <div class="itemBox" v-if="!searchItemShow">
       <classify-item></classify-item>
     </div>
-    <nav-tab></nav-tab>
+    <nav-tab v-if="!searchItemShow"></nav-tab>
   </div>
 </template>
 
 <script>
+	
+	
+	import  {mapState,mapGetters,mapActions} from "vuex"
+	
 import IndexHeader from "../IndexComponents/IndexHeaderComponent"
+import SearchItem from "../IndexComponents/SearchItemComponents/SearchItemComponent"
 import ClassifyItem from "./ClassifyItem"
 export default {
   name: 'finder',
@@ -19,16 +25,20 @@ export default {
       
     }
   },
+  computed:{
+  	...mapState(["isShow","searchItemShow"])
+  },
    components:{
       IndexHeader,
-      ClassifyItem
+      ClassifyItem,
+      SearchItem
 
    }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
 .classifyTitle{
     width:100%; 
     overflow: hidden;

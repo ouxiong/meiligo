@@ -3,7 +3,7 @@
     <div class="swiper-container preference-item-box">
 			<div class="swiper-wrapper preference-item-box-uls">
 				<div class="swiper-slide preference-item-lis" v-for="pfce in preference">
-					<a href="" class="goods_item">
+					<router-link to="/detail" class="goods_item">
 						<div class="goods_img">
 							<img :src="pfce.image" :alt="pfce.title"/>
 						</div>
@@ -11,7 +11,7 @@
 							<p>{{'￥'+pfce.discountPrice}}<del v-text="pfce.price"></del></p>
 							<button>立即抢购</button>
 						</div>
-					</a>
+					</router-link>
 				</div>
 				<div class="swiper-slide goods_chakan_box">
 					<a href="javascript:void(0);" class="goods_chakan"></a>

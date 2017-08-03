@@ -26,7 +26,7 @@ export default {
   data () {
     return {
      wrap:[],
-     toRouter:["allgroupbooking","xiazhuang","mingxing","quantao","shangxin"]
+     toRouter:["allgroupbooking","hotsummer","startalmirah","fullset","shangxin"]
     }
   },
   methods:{
@@ -35,7 +35,6 @@ export default {
 			jsonp("http://mce.mogucdn.com/jsonp/multiget/3?pids=5868%2C6348%2C43542%2C13730%2C59540%2C42287", null, function (err, res) {
 				  if (res) {
 				  that.wrap=res.data["13730"].list
-				  console.log(res.data["13730"].list)
 				  }
 				});
 		}
