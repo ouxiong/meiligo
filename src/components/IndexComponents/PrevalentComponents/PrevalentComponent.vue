@@ -1,3 +1,4 @@
+/* index 流行 */
 <template>
   <div class="index-prevalent">
     <prevalent-tab></prevalent-tab>

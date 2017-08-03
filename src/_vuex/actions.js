@@ -1,5 +1,5 @@
 
-
+import jsonp from "jsonp"
 export default {
 	getPosition({commit}){
 		 var map, geolocation;
@@ -48,5 +48,15 @@ export default {
 		        	
 		        });
 		    });
-	}
+	},
+	// getGoodsData({commit}){
+	// 	console.log('getGoodsData')
+	// 	commit("getGoodsData",position)
+	// 	jsonp('http://m.meilishuo.com/detail/mls/v1/h5?iid=1kbicaa&_ajax=1&cparam= ',function(err, data){
+    //           if(data){
+	// 			  console.log(data.result)
+    //                commit("getGoodsData",data.result)
+    //           }
+	// 	  });
+	// }
 }

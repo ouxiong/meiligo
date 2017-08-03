@@ -7,7 +7,7 @@
           infinite-scroll-disabled="loading"
           infinite-scroll-distance="10">
           <div class="item" v-for="item in listData">
-              <a class="imgWarp" href="###">
+              <router-link class="imgWarp" to="/detail">
                 <img :src="item.show.img" alt="">
                 <div class="goods_info">
                     <p class="title">{{item.title}}</p>
@@ -16,7 +16,7 @@
                     </p> 
                     <p class="sale_num">{{item.sale}}人已购买</p> 
                 </div>
-              </a>
+              </router-link>
             <!--.data.list["0"].show.img  -->
           </div>
       </div>

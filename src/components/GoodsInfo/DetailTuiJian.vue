@@ -13,8 +13,8 @@
         </div>
         <!--图片组件  -->
         <div class="index-prevalent-content"  >
-            <div class="content-box" v-for="item in 30">
-                <a class="iwf" href="###" >
+            <div class="content-box" v-for="item in 12">
+                <router-link class="iwf"  to="/detail" >
                     <div class="content-box-top">
                         <img src="http://s3.mogucdn.com/mlcdn/55cf19/170623_2f5d05a383k4fblfheg3akc0gbjg2_640x960.jpg_468x468.jpg" alt=""/>
                     </div>
@@ -23,22 +23,40 @@
                         <span class="price_info" >¥49.70</span>
                         <span class="fav_num"><em class="no_collect_icon"></em>600</span>
                     </div>
-                </a>
+                </router-link>
             </div>
         </div>
        </div>
     </div>
+	<div class="tui-jian-kong"></div>
   </div>
 </template>
 
 <script>
-
+import {mapState} from 'vuex'
+import jsonp from "jsonp"
 export default {
     data(){
         return{
 
         }
-    }
+	},
+	methods:{
+		getData(){
+            var that = this;
+          jsonp('http://api.meilishuo.com/h5/mwp.darwin.get/3/?mw-appkey=100028&mw-t=1501749336830&mw-ttid=NMMain%40mls_h5_1.0&data=%7B%22iidE%22%3A%221kbicaa%22%2C%22pid%22%3A6011%2C%22plat%22%3A%22h5%22%2C%22pageSize%22%3A12%7D&mw-sign=10396455ba8d5cba35af9fcfbaa044a7&_=1501749336832',{callback:'mwpCb2',},function(err, data){
+              if(data){
+                //   console.log(data)
+                  
+
+              }
+          })
+      },
+	 
+	},
+	mounted(){
+		this.getData()
+	}
 }
 </script>
 
@@ -140,5 +158,10 @@ export default {
 			}
 		}
 	}
+
+.tui-jian-kong{
+	width: 100%;
+	height: 1.16rem;
+}
 </style>
 

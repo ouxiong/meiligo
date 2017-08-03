@@ -11,7 +11,8 @@ const state = {
 	isShow:false,
 	goTopShow:false,
 	searchItemShow:false,
-	sort:'pop'
+	sort:'pop',
+	goodsData:null
 }
 
 const mutations = {
@@ -29,6 +30,10 @@ const mutations = {
 	},
 	ChangeSort(state,sort){
 		state.sort = sort;
+	},
+	// 获取商品信息
+	getGoodsData(state,data){
+		state.goodsData = data;
 	}
 }
 

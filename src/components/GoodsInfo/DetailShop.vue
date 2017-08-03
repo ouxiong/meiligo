@@ -6,11 +6,11 @@
             <!-- 头像 -->
             <div class="clearfix"> 
                 <a class="info-avatar" href="http://m.meilishuo.com/shop/index/1hxoe"> 
-                <img src="http://s3.mogucdn.com/b7/avatar/150301/178c03_ie2weyzwgnsgey3bmyytambqhayde_200x200.jpg_100x100.jpg"> 
+                <img :src="goodsData?goodsData.shopInfo.shopLogo:''"> 
                 </a> 
                 <div class="flex shop-info-container"> 
                     <div class="shop-info-title"> 
-                        <p class="title"> LOLO大小姐  </p> 
+                        <p class="title" v-text="goodsData?goodsData.shopInfo.name:''">  </p> 
                     </div> 
                     <div  class="shop-collect " @click="changeMark"> 
                         <span :class="[this.isMarked?'not-marked':'has-marked']">已收藏</span> 
@@ -25,37 +25,28 @@
             <div class="info-content"> 
                 <div class="count"> 
                     <div class="sale">
-                        <span class="fz-18">21329</span>
+                        <span class="fz-18" v-text="goodsData?goodsData.shopInfo.cSells:''"></span>
                         <br>总销量
                     </div> 
                     <div class="all">
-                        <span class="fz-18">179</span>
+                        <span class="fz-18" v-text="goodsData?goodsData.shopInfo.cGoods:''"></span>
                         <br>全部宝贝
                     </div> 
                 </div>  
                 <!-- 评价 -->
                  <div class="shop-evaluate"> 
                      <ul>  
-                        <li> 
-                             <span>描述相符</span>  
-                             <em>4.61</em> 
-                             <i>高</i> 
+                        <li v-for="item in goodsData?goodsData.shopInfo.score:[]"> 
+                             <span v-text="item.name">描述相符</span>  
+                             <em v-text="item.score">4.61</em> 
+                             <i  v-text="item.isBetter">高</i> 
                         </li>  
-                        <li> 
-                            <span>价格合理</span>  
-                            <em>4.62</em> 
-                            <i>高</i>  
-                        </li>  
-                        <li> 
-                            <span>质量满意</span>  
-                            <em>4.59</em> 
-                            <i>高</i>  
-                        </li>  
+                        
                     </ul> 
                 </div>
             </div> 
             <div class="info-goshop"> 
-                <a href="http://m.meilishuo.com/shop/index/1hxoe">进店逛逛</a> 
+                <a :href="goodsData?goodsData.shopInfo.shopUrl:''">进店逛逛</a> 
             </div>  
         </div>
     </div>
@@ -63,13 +54,16 @@
 </template>
 
 <script>
-
+import {mapState} from 'vuex'
 export default {
   data(){
       return{
         isMarked:false
       }
   },
+  computed:{
+        ...mapState(['goodsData'])
+    },
   methods:{
       changeMark:function(){
           this.isMarked = (!this.isMarked)

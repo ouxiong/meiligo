@@ -3,38 +3,25 @@
 <template>
   <div class="primary-info">
         
-        <div class="info-title break">时尚中长款喇叭袖防晒衣女沙滩薄款雪纺开叉上衣开衫披肩外套  </div>
+        <div class="info-title break" v-text="goodsData?goodsData.detailInfo.desc:''"></div>
         <div class="info-price flex "> 
             <span class="flex">   
-                <span class="now">¥39.90</span>  
-                <span class="market">¥57.00</span>    
-                <span class="discount" style="background-color: #FF6699">7折</span>
+                <span class="now"v-text="goodsData?goodsData.itemInfo.price:''"></span>  
+                <span class="market" v-text="goodsData?goodsData.itemInfo.oldPrice:''"></span>    
+                <span class="discount" style="background-color: #FF6699" v-text="goodsData?goodsData.itemInfo.discountDesc:''"></span>
             </span>
         </div>
-        <div class="info-other info-other-notopbor">  
-            <span class="item">销量 651</span>  
-            <span class="item">收藏200人</span>  
-            <span class="item">72小时发货</span>  
+        <div class="info-other info-other-notopbor" >  
+            <span class="item" v-for="item in goodsData?goodsData.columns:[]" v-text="item"></span>  
         </div>
         <div class="services-container">
             <div class="info-services"> 
                 <div class="flex service-list">  
-                    <span class="service-item"> 
-                        <img class="service-icon" src="http://s3.mogucdn.com/p1/160607/upload_ie4tkmbtgqztomjqhezdambqgqyde_44x44.png"> 
-                        <span class="service-name">退货补运费</span> 
+                    <span class="service-item" v-for="item in goodsData?goodsData.shopInfo.services:[]"> 
+                        <img class="service-icon" :src="item.icon"> 
+                        <span class="service-name" v-text="item.name"></span> 
                     </span>  
-                    <span class="service-item"> 
-                        <img class="service-icon" src="http://s3.mogucdn.com/p1/160607/upload_ie4tkmbtgqztomjqhezdambqgqyde_44x44.png"> 
-                        <span class="service-name">全国包邮</span> 
-                    </span>  
-                    <span class="service-item"> 
-                        <img class="service-icon" src="http://s3.mogucdn.com/p1/160607/upload_ie4tkmbtgqztomjqhezdambqgqyde_44x44.png"> 
-                        <span class="service-name">7天无理由退货</span> 
-                    </span>  
-                    <span class="service-item"> 
-                        <img class="service-icon" src="http://s3.mogucdn.com/p1/160607/upload_ie4tkmbtgqztomjqhezdambqgqyde_44x44.png"> 
-                        <span class="service-name">72小时发货</span> 
-                    </span>  
+                    
                 </div> 
                 <img class="service-arrow"  @click="isModelShow" src="https://s10.mogucdn.com/mlcdn/c45406/170711_701e7hcfi1j9fe76hgd560bj28d87_14x22.png" alt="">
             </div>
@@ -42,31 +29,13 @@
                 <div class="model-services-title">服务说明</div> 
                 <div class="model-services-content"> 
                     <ul class="service-list">  
-                        <li class="service-item"> 
+                        <li class="service-item" v-for="item in goodsData?goodsData.shopInfo.services:[]"> 
                             <div> 
-                                <img class="service-icon" src="http://s3.mogucdn.com/p1/160607/upload_ie4tkmbtgqztomjqhezdambqgqyde_44x44.png"> 
-                                <span class="service-name">退货补运费</span> 
+                                <img class="service-icon" :src="item.icon"> 
+                                <span class="service-name" v-text="item.name"></span> 
                             </div>  
                         </li>  
-                        <li class="service-item"> 
-                            <div> 
-                                <img class="service-icon" src="http://s3.mogucdn.com/p1/160607/upload_ie4tkmbtgqztomjqhezdambqgqyde_44x44.png"> 
-                                <span class="service-name">全国包邮
-                                </span> 
-                            </div>  
-                        </li>  
-                        <li class="service-item"> 
-                            <div> 
-                                <img class="service-icon" src="http://s3.mogucdn.com/p1/160607/upload_ie4tkmbtgqztomjqhezdambqgqyde_44x44.png"> 
-                                <span class="service-name">7天无理由退货</span> 
-                            </div>  
-                        </li>  
-                        <li class="service-item"> 
-                            <div> 
-                                <img class="service-icon" src="http://s3.mogucdn.com/p1/160607/upload_ie4tkmbtgqztomjqhezdambqgqyde_44x44.png"> 
-                                <span class="service-name">72小时发货</span> 
-                            </div>  
-                        </li>  
+                        
                     </ul> 
                 </div> 
                 <div class="model-services-footer" @click="isModelShow" >完成</div>
@@ -77,7 +46,7 @@
 </template>
 
 <script>
-
+import {mapState} from 'vuex'
 export default {
     data(){
         return{
@@ -89,6 +58,11 @@ export default {
            this.modelShow=(!this.modelShow)
         //    console.log(this.modelShow)
         }
+    },
+    computed:{
+        ...mapState(['goodsData'])
+    },
+    mounted(){
     }
     
 }
