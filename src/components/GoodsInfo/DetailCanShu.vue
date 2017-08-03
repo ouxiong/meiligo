@@ -17,21 +17,9 @@
               <div class="item"> 
                   <table>  
                       <tbody>  
-                        <tr>  
-                          <td>尺码</td>  
-                          <td>均码</td>  
-                        </tr>  
-                        <tr>  
-                            <td>肩宽</td>  
-                            <td>40</td>  
-                        </tr>  
-                        <tr>  
-                            <td>衣长</td>  
-                            <td>90</td>  
-                        </tr>  
-                        <tr>  
-                            <td>胸围</td>  
-                            <td>105</td>  
+                        <tr v-for="item in goodsData?goodsData.itemParams.rule.tables[0]:[]">  
+                          <td v-text="item[0]"></td>  
+                          <td v-text="item[1]"></td>  
                         </tr>  
                       </tbody> 
                   </table> 
@@ -39,19 +27,12 @@
           </div>  
           <!-- 参数 -->  
           <div class="param-list"> 
-            <ul v-for="item in 5">  
-              <li> 
-                <span class="param-name">图案</span> 
-                <p class="param-info">抽象图案,印花/花卉</p> 
+            <ul >  
+              <li v-for=" item in goodsData?goodsData.itemParams.info.set:[]"> 
+                <span class="param-name" v-text="item.key"></span> 
+                <p class="param-info" v-text="item.value"></p> 
               </li>  
-              <li> 
-                <span class="param-name">颜色</span> 
-                <p class="param-info">白底黄花,黑底羽毛,黑底牡丹</p> 
-              </li>  
-              <li> 
-                <span class="param-name">袖型</span> 
-                <p class="param-info">喇叭袖</p> 
-              </li>    
+                 
             </ul> 
           </div>    
         </div> 
@@ -61,11 +42,14 @@
 </template>
 
 <script>
-
+import {mapState} from 'vuex'
 export default {
     data(){
         return{}
-    }
+    },
+    computed:{
+        ...mapState(['goodsData'])
+    },
 }
 </script>
 

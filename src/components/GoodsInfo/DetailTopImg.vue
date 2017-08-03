@@ -5,8 +5,8 @@
   <div >
     <div class="swiper-container detail-banner">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" v-for="item in 5">
-                  <img class="swiper-img" src="http://s3.mogucdn.com/mlcdn/55cf19/170504_242646c27114ffkf1i1gc3472gi41_640x960.jpg_640x960.v1cOK.81.jpg">
+            <div class="swiper-slide" v-for="item in goodsData?goodsData.itemInfo.topImages:[]" >
+                  <img class="swiper-img"  :src="item">
             </div>
             
         </div>
@@ -22,7 +22,7 @@
 </template>
 
 <script>
-
+import {mapState} from 'vuex'
 export default {
   swiper:null,
   data(){
@@ -54,16 +54,23 @@ export default {
 
         
     // })
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        paginationType: 'fraction',
-         slidesPerView: 'auto',
-        paginationClickable: true,
-        spaceBetween: 30,
-    });
+    
+      this.$options.swiper = new Swiper('.swiper-container', {
+          pagination: '.swiper-pagination',
+          paginationType: 'fraction',
+          slidesPerView: 'auto',
+          paginationClickable: true,
+          spaceBetween: 30,
+      });
+
+      
+    
   },
+  computed:{
+        ...mapState(['goodsData'])
+    },
   updated(){
-  	
+  	this.$options.swiper.update()
   },
   
 }

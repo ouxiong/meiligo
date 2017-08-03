@@ -1,31 +1,37 @@
 <template>
-  <div class="intrWarp" >
+  <div class="intrWarp"  >
         <div class="tabpanel-top"></div>
-        <div class="tabpanel-occupying" > 
+        <div class="tabpanel-occupying" ref="viewBox" > 
             <!-- 标签 --> 
             <!--吸顶的时候加tabpanel-fixed  -->
-            <nav class="tabpanel-tabs center tabpanel-fixed "> 
-                <li class="tab-item"> 
+            <nav class="tabpanel-tabs center  " :class="[isTopFixed?'tabpanel-fixed':'']"> 
+                <li class="tab-item" @click="goAnchor('#tuwen')"> 
                     <span>图文详情</span> 
                     <i></i> 
                 </li> 
-                <li class="tab-item"> 
+                <li class="tab-item" @click="goAnchor('#canshu')"> 
                     <span>商品参数</span> 
                     <i></i> 
                 </li> 
-                <li class="tab-item"> 
-                    <span>评价(101)</span> 
+                <li class="tab-item" @click="goAnchor('#pingjia')"> 
+                    <span>评价({{goodsData?goodsData.rate.cRate:0}})</span> 
                     <i></i> 
                 </li> 
-                <li class="tab-item active"> 
+                <li class="tab-item" @click="goAnchor('#tuijian')"> 
                     <span class="shop-hot">热卖推荐</span> 
                     <i></i> 
                 </li> 
             </nav> 
         </div>
-        <div class="tabpanel-panels">
+        <div class="tabpanel-panels" >
             <!-- 图文详情 -->
-            <detail-page-img></detail-page-img>
+            <detail-page-img id="tuwen"></detail-page-img>
+            <!-- 参数 -->
+            <detail-can-shu id="canshu"></detail-can-shu>
+            <!-- 评价 -->
+            <detail-ping-jia id="pingjia"></detail-ping-jia>
+            <!-- 推荐 -->
+            <detail-tui-jian id="tuijian"></detail-tui-jian>
         </div>
         
   </div>
@@ -33,15 +39,56 @@
 
 <script>
 import DetailPageImg from './DetailPageImg'
+import DetailCanShu from './DetailCanShu'
+import DetailPingJia from './DetailPingJia'
+import DetailTuiJian from './DetailTuiJian'
+
+import {mapState} from 'vuex'
 
 export default {
     data(){
         return{
-
+            isTopFixed:false
         }
     },
     components:{
         DetailPageImg,
+        DetailCanShu,
+        DetailPingJia,
+        DetailTuiJian
+    },
+    computed:{
+        ...mapState(['goodsData'])
+    },
+    methods:{
+        goAnchor(selector) {
+            var anchor = this.$el.querySelector(selector)
+            document.body.scrollTop = anchor.offsetTop - 45;
+        }
+    },
+    mounted(){
+        var that = this;
+        // 首先通过$refs获取dom元素
+        this.box = this.$refs.viewBox
+        // 需要吸顶的元素距离顶部的位置
+        // console.log(this.$refs.viewBox.offsetTop)
+        // var itemOffsetTop = this.$refs.viewBox.offsetTop
+        var itemOffsetTop = 875;
+        
+        // 监听这个dom的scroll事件
+        window.addEventListener('scroll', () => {
+        // console.log(this.$refs.viewBox.offsetTop)
+        // console.log(document.body.scrollTop)
+        if(itemOffsetTop<=document.body.scrollTop){
+            that.isTopFixed=true
+            // console.log(true)
+        }else{
+            that.isTopFixed=false
+            // console.log(false)
+            
+            
+        }
+        }, false)
     }
 }
 </script>

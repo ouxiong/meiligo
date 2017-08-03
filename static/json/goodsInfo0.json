@@ -1,0 +1,413 @@
+{
+"status": {
+"code": 1001,
+"msg": ""
+},
+"result": {
+"skuInfo": {
+"title": "时尚中长款喇叭袖防晒衣女沙滩薄款雪纺开叉上衣开衫披肩外套",
+"skus": [
+{
+"stockId": "1r5ddx6",
+"xdSkuId": "1r5ddx6",
+"price": 5700,
+"nowprice": 3990,
+"img": "http://s3.mogucdn.com/mlcdn/55cf19/170504_7f6k2d740a8h65l4fg178739d4bl9_640x960.jpg",
+"currency": "￥",
+"stock": 199,
+"style": "白底黄花",
+"size": "均码",
+"styleId": 1,
+"sizeId": 100
+},
+{
+"stockId": "1r5ddx8",
+"xdSkuId": "1r5ddx8",
+"price": 5700,
+"nowprice": 3990,
+"img": "http://s3.mogucdn.com/mlcdn/55cf19/170504_30f55922112c1a7l4bde89hi4c67h_640x960.jpg",
+"currency": "￥",
+"stock": 431,
+"style": "黑底羽毛",
+"size": "均码",
+"styleId": 2,
+"sizeId": 100
+},
+{
+"stockId": "1r5ddxa",
+"xdSkuId": "1r5ddxa",
+"price": 5700,
+"nowprice": 3990,
+"img": "http://s11.mogucdn.com/mlcdn/55cf19/170504_12db1i5abjf4c57dbb9igc038624b_640x960.jpg",
+"currency": "￥",
+"stock": 543,
+"style": "黑底牡丹",
+"size": "均码",
+"styleId": 3,
+"sizeId": 100
+}
+],
+"props": [
+{
+"label": "颜色:",
+"list": [
+{
+"type": "style",
+"name": "白底黄花",
+"isDefault": false,
+"styleId": 1,
+"index": 1
+},
+{
+"type": "style",
+"name": "黑底羽毛",
+"isDefault": false,
+"styleId": 2,
+"index": 2
+},
+{
+"type": "style",
+"name": "黑底牡丹",
+"isDefault": false,
+"styleId": 3,
+"index": 3
+}
+],
+"isDefault": false
+},
+{
+"label": "尺码:",
+"list": [
+{
+"type": "size",
+"name": "均码",
+"isDefault": false,
+"sizeId": 100,
+"index": 100
+}
+],
+"isDefault": false
+}
+],
+"styleKey": "颜色",
+"sizeKey": "尺码",
+"priceRange": "¥39.90",
+"defaultPrice": "¥39.90",
+"isAbroad": false,
+"totalStock": 1173
+},
+"itemInfo": {
+"desc": "时尚中长款喇叭袖防晒衣女沙滩薄款雪纺开叉上衣开衫披肩外套",
+"userId": "12ego1q",
+"shopId": "1hxoe",
+"title": "时尚中长款喇叭袖防晒衣女沙滩薄款雪纺开叉上衣开衫披肩外套",
+"discountDesc": "7折",
+"discountBgColor": "#f13e3a",
+"lowPrice": "57.00",
+"highPrice": "57.00",
+"lowNowPrice": "39.90",
+"highNowPrice": "39.90",
+"iid": "1kbicaa",
+"isSelf": false,
+"isFaved": false,
+"imUrl": "mls://imTalk?&source=1&goodsId=1kbicaa&userId=12ego1q&shopId=1hxoe",
+"state": 0,
+"topImages": [
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_242646c27114ffkf1i1gc3472gi41_640x960.jpg",
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_5aafejfebjgklkeh4cjg4eijai980_640x960.jpg",
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_2baff088fc1dik069e26160elhj91_640x960.jpg",
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_5df74glk2k3301i0l7jaaci1e16b6_640x960.jpg",
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_37kabcb7h8g735i6ba2g67i265g94_640x960.jpg"
+],
+"oldPrice": "¥57.00",
+"price": "¥39.90",
+"saleType": 0,
+"tags": "",
+"inActivity": false,
+"redPacketsSwitch": false,
+"cFav": 0,
+"admin": false,
+"cids": "#682# #683# #684# #690#",
+"cartNum": 0,
+"extra": {
+"deliveryTime": 72,
+"sendAddress": ""
+},
+"addCartTips": false,
+"isGrayUser": false,
+"isNewComer": false
+},
+"topBar": {
+"img": "http://s3.mogucdn.com/p1/150811/upload_ieytsmbrmm4wkm3ggizdambqmeyde_226x43.png",
+"link": "http://www.xiaodian.com/h5/download"
+},
+"detailInfo": {
+"desc": "时尚中长款喇叭袖防晒衣女沙滩薄款雪纺开叉上衣开衫披肩外套",
+"detailImage": [
+{
+"desc": "",
+"key": "穿着效果",
+"anchor": "model_img",
+"list": [
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_2ajjbkcaa4gej5hfed65lh85dedg7_800x601.jpg",
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_4047j754g1551h5fab96b3i26bcgl_800x601.jpg",
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_73484j0a73h89eac091fb30ld0l36_800x800.jpg",
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_6g353l7ccdfdfl47ce5j4k9c6f8fg_800x800.jpg",
+"http://s11.mogucdn.com/mlcdn/55cf19/170504_0d95b935igcj1lk71j20d8h0gjhhi_641x853.jpg",
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_815094k9fbadg86a1f2i8b9lgefij_800x800.jpg",
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_01e6ig0jj9ieeek6k33aj58g013a3_800x800.jpg",
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_86iba8ig42aj6g7cb86a7fl90d7dd_800x800.jpg",
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_8el96c2hk5ld69c533fj1ff55j82d_800x800.jpg",
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_5k82k5ela41bgj6c7d303940h8b2e_800x800.jpg",
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_8ai41c6d3ecbe4737k0g4d1ddj81g_800x800.jpg",
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_8e319alegldedlf660988664k49c9_800x800.jpg",
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_17e5910375j6k5l7c5idj6c639lcg_800x800.jpg",
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_774ddfk8dd2cbjgcef543il8e5h00_641x853.jpg",
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_3jcg289208eb89gjef158e617f657_641x853.jpg",
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_0j00gcj4bk22dgc8bfdh52ic70gc9_800x800.jpg",
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_3ehc46adejkkg8iiced637l6b4ec0_800x800.jpg",
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_1kh4iaac5hg9jfh28ih22hgg9382a_800x800.jpg",
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_7ge1992le7ij8edcl7ef86k8becf8_800x800.jpg",
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_74j15c5jb948j4ei90e446figada9_800x800.jpg",
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_7ge6i17a5k2h658e6gc2870d3dkkc_800x800.jpg",
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_3i45bg2393341f4cibbjd74i3k5l2_800x800.jpg",
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_6f3ak2kcb1kj26ijk9a80737lac86_800x800.jpg",
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_1l78bd4bj5h8f3c03de52kibijhik_800x800.jpg",
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_096j5lldhgl45k745949264jaa594_800x800.jpg",
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_61gf8kg838943idhlbdgg6j2d3i51_800x800.jpg",
+"http://s3.mogucdn.com/mlcdn/55cf19/170504_6la1kk5b54df0c8f17fa2953lgcla_800x800.jpg",
+"http://s3.mogucdn.com/p2/170317/77101615_86e9f0elcl86499l16jf26aallg14_1125x380.jpg"
+]
+}
+]
+},
+"columns": [
+"销量 654",
+"收藏200人",
+"默认快递"
+],
+"itemParams": {
+"info": {
+"set": [
+{
+"value": "抽象图案,印花/花卉",
+"key": "图案"
+},
+{
+"value": "白底黄花,黑底羽毛,黑底牡丹",
+"key": "颜色"
+},
+{
+"value": "喇叭袖",
+"key": "袖型"
+},
+{
+"value": "开襟",
+"key": "穿着方式"
+},
+{
+"value": "均码",
+"key": "尺码"
+},
+{
+"value": "中长款（66-80cm）",
+"key": "衣长"
+},
+{
+"value": "宽松",
+"key": "版型"
+},
+{
+"value": "开叉",
+"key": "下摆"
+},
+{
+"value": "斜肩",
+"key": "样式款型"
+},
+{
+"value": "夏季",
+"key": "季节"
+},
+{
+"value": "雪纺",
+"key": "材质"
+},
+{
+"value": "圆领",
+"key": "领型"
+},
+{
+"value": "荷叶边,开衩,透视,拼色/撞色,其他",
+"key": "元素"
+},
+{
+"value": "五分袖（中袖）",
+"key": "袖长"
+},
+{
+"value": "波西米亚,甜美",
+"key": "风格"
+}
+],
+"key": "产品参数",
+"anchor": "product_info"
+},
+"rule": {
+"desc": "※ 以上尺寸为实物人工测量，因测量当时不同会有1-2cm误差，相关数据仅作参考，以收到实物为准。",
+"tables": [
+[
+[
+"尺码",
+"均码"
+],
+[
+"肩宽",
+"40"
+],
+[
+"衣长",
+"90"
+],
+[
+"胸围",
+"105"
+]
+]
+],
+"key": "尺码说明",
+"anchor": "size_info",
+"disclaimer": "※ 以上尺寸为实物人工测量，因测量当时不同会有1-2cm误差，相关数据仅作参考，以收到实物为准。"
+}
+},
+"shopInfo": {
+"score": [
+{
+"name": "描述相符",
+"score": 4.62,
+"isBetter": true
+},
+{
+"name": "价格合理",
+"score": 4.62,
+"isBetter": true
+},
+{
+"name": "质量满意",
+"score": 4.6,
+"isBetter": true
+}
+],
+"services": [
+{
+"icon": "http://s3.mogucdn.com/p1/160607/upload_ie4tkmbtgqztomjqhezdambqgqyde_44x44.png",
+"name": "退货补运费"
+},
+{
+"icon": "http://s3.mogucdn.com/p1/160607/upload_ie4tkmbtgqztomjqhezdambqgqyde_44x44.png",
+"name": "全国包邮"
+},
+{
+"icon": "http://s3.mogucdn.com/p1/160607/upload_ie4tkmbtgqztomjqhezdambqgqyde_44x44.png",
+"name": "7天无理由退货"
+},
+{
+"icon": "http://s3.mogucdn.com/p1/160607/upload_ie4tkmbtgqztomjqhezdambqgqyde_44x44.png",
+"name": "72小时发货"
+}
+],
+"categories": [
+{
+"name": "-毛衣-",
+"link": "http://s.meilishuo.com/1hxoe/list/index?categoryId=192310"
+},
+{
+"name": "-外套-",
+"link": "http://s.meilishuo.com/1hxoe/list/index?categoryId=192312"
+},
+{
+"name": "-打底衫-",
+"link": "http://s.meilishuo.com/1hxoe/list/index?categoryId=192314"
+},
+{
+"name": "-棉衣棉服-",
+"link": "http://s.meilishuo.com/1hxoe/list/index?categoryId=192315"
+},
+{
+"name": "-衬衫-",
+"link": "http://s.meilishuo.com/1hxoe/list/index?categoryId=192317"
+},
+{
+"name": "-时尚套装-",
+"link": "http://s.meilishuo.com/1hxoe/list/index?categoryId=209409"
+},
+{
+"name": "-卫衣-",
+"link": "http://s.meilishuo.com/1hxoe/list/index?categoryId=209693"
+},
+{
+"name": "连衣裙，半身裙",
+"link": "http://s.meilishuo.com/1hxoe/list/index?categoryId=20045267"
+},
+{
+"name": "下装，裤子",
+"link": "http://s.meilishuo.com/1hxoe/list/index?categoryId=20079747"
+},
+{
+"name": "上装，上衣",
+"link": "http://s.meilishuo.com/1hxoe/list/index?categoryId=20082507"
+},
+{
+"name": "T恤，打底衫",
+"link": "http://s.meilishuo.com/1hxoe/list/index?categoryId=20196039"
+}
+],
+"cFans": 7491,
+"cSells": 21354,
+"allGoodsUrl": "http://m.meilishuo.com/shop/index/1hxoe",
+"shopUrl": "http://m.meilishuo.com/shop/index/1hxoe",
+"isMarked": false,
+"cGoods": 180,
+"userId": "12ego1q",
+"shopLogo": "http://s3.mogucdn.com/b7/avatar/150301/178c03_ie2weyzwgnsgey3bmyytambqhayde_200x200.jpg",
+"name": "LOLO大小姐",
+"shopId": "1hxoe",
+"type": 1,
+"level": 3,
+"nonsupportReasonRefound": false
+},
+"rate": {
+"list": [
+{
+"user": {
+"uid": "",
+"uname": "芳芳芳芳芳芳17",
+"avatar": "http://s3.mogucdn.com/p2/161214/103488673_825c06kdj394515kkkjhhi0el8j86_140x141.png",
+"profileUrl": "",
+"tagIndex": ""
+},
+"images": [
+"http://s3.mogucdn.com/mlcdn/c45406/170630_6dh309gi50c6jdih9003c6abgj83g_720x720.jpg",
+"http://s3.mogucdn.com/mlcdn/c45406/170630_6gbd9d8h6bkdlbi42d46i3la6h8lg_720x720.jpg"
+],
+"rateId": "1vll6r8",
+"content": "快递好快昨天发的今天晚上就到了，准备周末穿着去爬山",
+"created": 1498833388,
+"isAnonymous": 1,
+"style": "颜色:白底黄花 尺码:均码 ",
+"isEmpty": 0,
+"level": "",
+"canExplain": false,
+"extraInfo": [
+"体重:50 kg",
+"是否合身:合身",
+"身高:168 cm"
+]
+}
+],
+"cRate": 101
+},
+"isLogin": false,
+"esi": "<esi:try><esi:attempt><esi:include src='http://m.meilishuo.com/detail/mls/v1/h5_dyn?$(QUERY_STRING)'/></esi:attempt><esi:except></esi:except></esi:try>"
+}
+}

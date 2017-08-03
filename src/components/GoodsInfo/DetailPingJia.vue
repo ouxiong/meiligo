@@ -16,16 +16,16 @@
         </div>     
         <!-- 列表 --> 
         <div class="rates-list plr30">  
-          <div class="rate-item">  
+          <div class="rate-item" v-for="item in goodsData?goodsData.rate.list:[] ">  
             <!-- 用户信息 --> 
             <div class="rate-user"> 
               <span class="user-info"> 
-                <img class="avatar" src="http://s3.mogucdn.com/p2/161214/103488673_825c06kdj394515kkkjhhi0el8j86_140x141.png_100x100.jpg"> 
-                <span class="name">芳芳芳芳芳芳17</span> 
+                <img class="avatar" :src="item.user.avatar"> 
+                <span class="name" v-text="item.user.uname"></span> 
               </span> 
             </div>   
             <!-- 评价内容 --> 
-            <div class="rate-cont">快递好快昨天发的今天晚上就到了，准备周末穿着去爬山</div>   
+            <div class="rate-cont" v-text="item.content"></div>   
             <!-- 属性 --> 
             <div class="rate-attr"> 
               <span class="time">2017-06-30</span> 
@@ -49,13 +49,16 @@
 </template>
 
 <script>
-
+import {mapState} from 'vuex'
 export default {
     data(){
         return{
 
         }
-    }
+    },
+    computed:{
+        ...mapState(['goodsData'])
+    },
 }
 </script>
 
